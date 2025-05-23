@@ -1,0 +1,156 @@
+:root {
+    /*COLOR SETTING*/
+    --background-color: #0C090D;
+    --background-gradient-color: linear-gradient(135deg, #0C090D 60%, #120022 100%);
+    --text-main-color: #FFFFFF;
+    --text-secondary-color: #A0A0A0;
+    --glasmorphism-cardBg-ui: rgba(255, 255, 255, 0.158);
+    --primary-color: #7200D6;
+    --primary-gradient-color: linear-gradient(135deg, #7200D6, #B45EFF);
+
+    /*FONT SETTING*/
+    --font-family-main: 'Inter', sans-serif;
+    --font-family-secondary: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background-gradient-color);
+}
+
+.header-container {
+    width: 100%;
+    height: 16vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5rem;
+}
+
+.header-container .logo {
+    width: 240px;
+}
+
+.link-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .3rem;
+    position: relative;
+    z-index: 0;
+    width: 20rem;
+    height: 3.8rem;
+    padding-right: .4rem;
+    padding-left: 1.3rem;
+    background-color: var(--glasmorphism-cardBg-ui);
+    border-radius: 50px;
+    transition: background-color 0.5s ease;
+    overflow: hidden;
+}
+
+.link-container::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(135deg, #7200D6, #B45EFF);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+    border-radius: inherit;
+}
+
+.link-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--primary-gradient-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+    z-index: -1;
+    border-radius: inherit;
+}
+
+.link-container:hover::after {
+    transform: scaleX(1);
+}
+
+.link-container:hover .svg-container{
+    background: transparent;
+}
+
+.svg-container {
+    width: 48px;
+    height:48px;
+    border-radius: 50px;
+    background: var(--primary-gradient-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-container a {
+    text-decoration: none;
+    color: var(--text-main-color);
+    font-family: var(--font-family-secondary);
+    font-size: 22px;
+}
+
+/*SECTION SETTING*/
+.hero-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.hero-info h1{
+    font-family: var(--font-family-main);
+    font-size: 2.8rem;
+    color: white;
+}
+.hero-info h1 span {
+    background: var(--primary-gradient-color); /* your existing gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Optional fallback for Firefox and others */
+    background-clip: text;
+    color: transparent;
+    font-size: 4rem;
+}
+.hero-info p{
+    font-family: var(--font-family-secondary);
+    font-size: 1.4rem;
+    color: var(--text-secondary-color);
+}
+.btn-container{
+   display: flex;
+   justify-content: center;
+   margin-top: 2rem;
+}
+.btn-container a{
+    background: var(--primary-gradient-color);
+    text-decoration: none;
+    font-family: var(--font-family-secondary);
+    font-size: 1.4rem;
+   padding: 14px 40px;
+   border-radius: 50px;
+   color: var(--text-main-color);
+   transition: all 0.5s ease;
+}
+.btn-container a:hover{
+    background: var(--primary-gradient-color);
+    box-shadow: 0 0 20px #B45EFF;
+}
