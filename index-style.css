@@ -154,3 +154,42 @@ body {
     background: var(--primary-gradient-color);
     box-shadow: 0 0 20px #B45EFF;
 }
+
+/*FOOTER DESIGN*/
+.footer-container{
+    padding-top: 3rem;
+}
+
+.footer-navigation ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+.footer-navigation ul a{
+    text-decoration: none;
+    color: var(--text-main-color);
+    font-family: var(--font-family-secondary);
+    font-size: 1rem;
+}
+.footer-navigation ul a:hover{
+    color: var(--primary-color);
+    text-shadow: 0 0 30px #B45EFF;
+    transition: color 0.5s ease;
+}
+.footer-logo-copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-top: .8rem;
+}
+.footer-logo-copyright img{
+    width: 200px;
+}
+.footer-logo-copyright p{
+    font-family: var(--font-family-secondary);
+    font-size: 1rem;
+    color: var(--text-main-color);
+}

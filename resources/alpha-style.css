@@ -1,0 +1,58 @@
+/* Base styles */
+body {
+  margin: 0;
+  background-color: #0C090D;
+  font-family: 'Poppins', sans-serif;
+  color: #FFFFFF;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 2rem;
+  background: linear-gradient(135deg, #0C090D 60%, #120022 100%);
+  text-align: center;
+}
+
+.content {
+  max-width: 700px;
+}
+
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+h1 span {
+  color: #7200D6;
+}
+
+p {
+  color: #A0A0A0;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Primary Button */
+.btn-primary {
+  background: linear-gradient(135deg, #7200D6, #7200D6); /* same start and end */
+  color: white;
+  padding: 14px 32px;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 0 transparent;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #7200D6, #B45EFF);
+  box-shadow: 0 0 20px #B45EFF;
+}

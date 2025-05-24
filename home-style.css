@@ -1,0 +1,81 @@
+:root {
+    /*COLOR SETTING*/
+    --background-color: #0C090D;
+    --background-gradient-color: linear-gradient(135deg, #0C090D 60%, #120022 100%);
+    --text-main-color: #FFFFFF;
+    --text-secondary-color: #A0A0A0;
+    --glasmorphism-cardBg-ui: rgba(255, 255, 255, 0.158);
+    --primary-color: #7200D6;
+    --primary-gradient-color: linear-gradient(135deg, #7200D6, #B45EFF);
+
+    /*FONT SETTING*/
+    --font-family-main: 'Inter', sans-serif;
+    --font-family-secondary: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background-gradient-color);
+}
+
+
+
+
+.header-container {
+    width: 100%;
+    height: 16vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5rem;
+}
+
+.header-container .logo {
+    width: 240px;
+}
+
+
+
+/*FOOTER DESIGN*/
+.footer-container{
+    padding-top: 3rem;
+}
+
+.footer-navigation ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+.footer-navigation ul a{
+    text-decoration: none;
+    color: var(--text-main-color);
+    font-family: var(--font-family-secondary);
+    font-size: 1rem;
+}
+.footer-navigation ul a:hover{
+    color: var(--primary-color);
+    text-shadow: 0 0 30px #B45EFF;
+    transition: color 0.5s ease;
+}
+.footer-logo-copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-top: .8rem;
+}
+.footer-logo-copyright img{
+    width: 200px;
+}
+.footer-logo-copyright p{
+    font-family: var(--font-family-secondary);
+    font-size: 1rem;
+    color: var(--text-main-color);
+}
