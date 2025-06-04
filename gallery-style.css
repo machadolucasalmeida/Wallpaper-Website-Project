@@ -1,0 +1,234 @@
+:root {
+    /*COLOR SETTING*/
+    --background-color: #0C090D;
+    --background-gradient-color: linear-gradient(135deg, #0C090D 60%, #120022 100%);
+    --text-main-color: #FFFFFF;
+    --text-secondary-color: #A0A0A0;
+    --glasmorphism-cardBg-ui: rgba(255, 255, 255, 0.158);
+    --primary-color: #7200D6;
+    --primary-gradient-color: linear-gradient(135deg, #7200D6, #B45EFF);
+
+    /*FONT SETTING*/
+    --font-family-main: 'Inter', sans-serif;
+    --font-family-secondary: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background-gradient-color);
+    padding: 0 2.5rem;
+}
+
+/*HEADER DESIGN */
+.header-container {
+    width: 100%;
+    height: 16vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container .logo {
+    width: 240px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+header nav li {
+    font-family: var(--font-family-secondary);
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    list-style: none;
+    position: relative;
+}
+
+header nav li a {
+    text-decoration: none;
+    color: var(--text-main-color);
+}
+
+header nav li span:hover {
+    background: var(--primary-gradient-color);
+    /* your existing gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Optional fallback for Firefox and others */
+    background-clip: text;
+    color: transparent;
+}
+
+header nav li::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(135deg, #7200D6, #B45EFF);
+    height: 2.5px;
+    width: 0px;
+    bottom: 0;
+    transition: .5s;
+}
+
+header nav li:hover::before {
+    width: 100%;
+}
+
+.search-container {
+    position: relative;
+    width: max-content;
+    padding: 2px;
+    border-radius: 4rem;
+
+}
+
+.search-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #7200D6, #B45EFF);
+    border-radius: 4rem;
+    z-index: -1;
+}
+
+.search-container:focus-within::after {
+    background: linear-gradient(135deg, #B45EFF, #7200D6);
+    box-shadow: 0 0 10px #B45EFF;
+}
+
+.search-container input {
+    width: 16rem;
+    height: 3rem;
+    border-radius: 4rem;
+    background-color: var(--background-color);
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    position: relative;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.search-container svg {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-main-color);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    padding: 6px;
+    box-sizing: content-box;
+    background: linear-gradient(135deg, #7200D6, #B45EFF);
+}
+
+.search-container svg:hover {
+    box-shadow: 0 0 10px #B45EFF;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER DESIGN*/
+.footer-container {
+    padding-top: 3rem;
+}
+
+.footer-navigation ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.footer-navigation ul a {
+    text-decoration: none;
+    color: var(--text-main-color);
+    font-family: var(--font-family-secondary);
+    font-size: 1rem;
+}
+
+.footer-navigation ul a:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 30px #B45EFF;
+    transition: color 0.5s ease;
+}
+
+.footer-logo-copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-top: .8rem;
+}
+
+.footer-logo-copyright img {
+    width: 200px;
+}
+
+.footer-logo-copyright p {
+    font-family: var(--font-family-secondary);
+    font-size: 1rem;
+    color: var(--text-main-color);
+}
